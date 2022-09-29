@@ -1,0 +1,39 @@
+.btn {
+    border-radius: 0;
+}
+
+.body-sinopse {
+    background: rgba(0, 0, 0, 0.75) url('../images/breakingbad3.jpg');
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    background-blend-mode: darken;
+}
+
+.sinopse-h2 {
+    display: flex;
+    justify-content: left;
+    align-items: left;
+}
+
+.sinopse {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 60%;
+}
+
+.p1 {
+    font-family: system-ui;
+    font-size: 21px;
+    color: #F8F8FF;
+}
+
+h2 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 72px;
+    font-family: serif;
+    color: #FFD700;
+}
