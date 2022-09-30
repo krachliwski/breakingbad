@@ -37,3 +37,35 @@ h2 {
     font-family: serif;
     color: #FFD700;
 }
+
+.bg-notFound {
+    background: rgba(0, 0, 0, 0.75) url('../images/404.jpeg');
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    background-blend-mode: darken;
+}
+
+.bg-actors {
+    background: rgba(0, 0, 0, 0.8) url('../images/breakingbad5.jpg');
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    background-blend-mode: darken;
+}
+
+.bg-episodes {
+    background: rgba(0, 0, 0, 0.8) url('../images/breakingbad4.jpg');
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    background-blend-mode: darken;
+}
+
+.bg-quotes {
+    background: rgba(0, 0, 0, 0.8) url('../images/breakingbad7.jpg');
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    background-blend-mode: darken;
+}

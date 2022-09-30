@@ -36,6 +36,9 @@ include "configs.php";
           <li class="nav-item">
             <a class="nav-link" href="actors">Atores</a>
           </li>
+          <li class="nav-item">
+            <a class="nav-link" href="quotes">Frases</a>
+          </li>
         </ul>
       </div>
     </div>

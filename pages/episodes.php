@@ -5,9 +5,9 @@
     <link rel="stylesheet" href="../css/style.css">
 </head>
 
-<body class='bg-actors'>
+<body class='bg-episodes'>
     <div>
-        <p>Todos os Atores</p>
+        <p>Episódios</p>
     </div>
 </body>
 

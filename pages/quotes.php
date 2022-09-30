@@ -5,9 +5,9 @@
     <link rel="stylesheet" href="../css/style.css">
 </head>
 
-<body class='bg-actors'>
+<body class='bg-quotes'>
     <div>
-        <p>Todos os Atores</p>
+        <p>Frases</p>
     </div>
 </body>
 

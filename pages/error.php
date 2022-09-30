@@ -1,5 +1,11 @@
-<div>
-    <p class="text-center">
-        <img src="images/404.jpeg" alt="404" width="100%" weight="100%">
-    </p>
-</div>
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+
+<body class='bg-notFound'>
+</body>
+
+</html>
