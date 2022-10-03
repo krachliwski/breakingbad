@@ -7,8 +7,20 @@
 
 <body class='bg-actors'>
     <div>
-        <p>Todos os Atores</p>
+        <h2>Atores</h2>
     </div>
+
+    <?php
+    $arquivo = URL."characters";
+
+    $dados = file_get_contents($arquivo);
+
+    $dados = json_decode($dados);
+
+    foreach ($dados as $actors) {
+        echo "<p>{$actors->name}</p>";
+    }
+    ?>
 </body>
 
 </html>
