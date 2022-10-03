@@ -20,6 +20,12 @@
         </p>
     </div>
 
+    <div class='trailer'>
+        <div class='animated-border'>
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/2-W6_6gJda0" title="Breaking Bad - Trailer Legendado" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        </div>
+    </div>
+
 </body>
 
 </html>
