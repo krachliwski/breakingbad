@@ -1,0 +1,251 @@
+@import url("https://fonts.googleapis.com/css?family=Lato:300");
+
+h2 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 72px;
+    font-family: serif;
+    color: #FFD700;
+    padding-bottom: 20px;
+}
+
+.bg-notFound {
+    background: rgba(0, 0, 0, 0.75) url('../images/404.jpeg');
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    background-blend-mode: darken;
+}
+
+
+/* HOME */
+.body-sinopse {
+    background: rgba(0, 0, 0, 0.75) url('../images/breakingbad3.jpg');
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    background-blend-mode: darken;
+}
+
+.sinopse-h2 {
+    display: flex;
+    justify-content: left;
+    align-items: left;
+}
+
+.sinopse {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 60%;
+}
+
+.p1 {
+    font-family: system-ui;
+    font-size: 21px;
+    color: #F8F8FF;
+}
+
+.trailer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.animated-border {
+    --border-width: 3px;
+
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 562px;
+    height: 318px;
+    background: #222;
+    border-radius: var(--border-width);
+}
+
+.animated-border::after {
+    position: absolute;
+    content: "";
+    top: calc(-1 * var(--border-width));
+    left: calc(-1 * var(--border-width));
+    z-index: -1;
+    width: calc(100% + var(--border-width) * 2);
+    height: calc(100% + var(--border-width) * 2);
+    background: linear-gradient(60deg,
+            hsl(224, 85%, 66%),
+            hsl(269, 85%, 66%),
+            hsl(314, 85%, 66%),
+            hsl(359, 85%, 66%),
+            hsl(44, 85%, 66%),
+            hsl(89, 85%, 66%),
+            hsl(134, 85%, 66%),
+            hsl(179, 85%, 66%));
+    background-size: 300% 300%;
+    background-position: 0 50%;
+    border-radius: calc(2 * var(--border-width));
+    animation: moveGradient 4s alternate infinite;
+}
+
+@keyframes moveGradient {
+    50% {
+        background-position: 100% 50%;
+    }
+}
+
+
+
+/* EPISODES */
+.bg-episodes {
+    background: rgba(0, 0, 0, 0.8) url('../images/breakingbad4.jpg');
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    background-blend-mode: darken;
+}
+
+
+
+/* ACTORS */
+.bg-actors {
+    background: rgba(0, 0, 0, 0.8) url('../images/breakingbad5.jpg');
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    background-blend-mode: darken;
+}
+
+.container-actors{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.title {
+    padding-bottom: 100px;
+}
+
+.actors {
+    display: inline-block;
+    margin-left: 10px;
+    width: 220px;
+    height: 100px;
+}
+
+.wraper {
+    transform: translate(-50%, -50%);
+}
+
+.cards {
+    flex: 1;
+    flex-basis: 300px;
+    flex-grow: 0;
+    height: 440px;
+    background: #fff;
+    border: 2px solid #fff;
+    box-shadow: 0px 4px 7px rgba(0, 0, 0, .5);
+    box-sizing: border-box;
+    border-radius: 5px;
+    cursor: default;
+    transition: all .5s cubic-bezier(.8, .5, .2, 1.4);
+    overflow: hidden;
+    position: relative;
+}
+
+.cards img {
+    width: 100%;
+    height: 100%;
+    transition: all .5s cubic-bezier(.8, .5, .2, 1.4);
+}
+
+.cards .descriptions {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    background-color: rgba(255, 255, 255, .7);
+    width: 100%;
+    height: 100%;
+    transition: all .7s ease-in-out;
+    padding: 20px;
+    box-sizing: border-box;
+    clip-path: circle(0% at 100% 100%);
+}
+
+.cards:hover .descriptions {
+    left: 0px;
+    transition: all .7s ease-in-out;
+    clip-path: circle(75%);
+}
+
+.cards:hover {
+    transition: all .5s cubic-bezier(.8, .5, .2, 1.4);
+    box-shadow: 0px 2px 3px rgba(0, 0, 0, .3);
+    transform: scale(.97);
+}
+
+.cards:hover img {
+    transition: all .5s cubic-bezier(.8, .5, .2, 1.4);
+    transform: scale(1.6) rotate(20deg);
+    filter: blur(3px);
+}
+
+.descriptions h1 {
+    color: #3a86ff;
+    letter-spacing: 1px;
+    margin: 0px;
+}
+
+.cards p {
+    line-height: 24px;
+    height: 70%;
+}
+
+
+
+/* QUOTES */
+.bg-quotes {
+    background: rgba(0, 0, 0, 0.8) url('../images/breakingbad7.jpg');
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    background-blend-mode: darken;
+}
+
+.quotes {
+    display: flex;
+    flex-direction: row;
+    margin-bottom: 10px;
+}
+
+.phrase, .translate {
+    width: 50%;
+    border: solid 1px #3a86ff;
+    border-radius: 5px;
+}
+
+.phrase {
+    float: left;
+    margin-right: 5px;
+}
+
+.translate {
+    float: right;
+}
+
+.name {
+    font-size: 35px;
+    color: #FFD700;
+}
+
+h3 {
+    font-size: 25px;
+    color: #3a86ff;
+}
+
+.quotes p {
+    font-size: 25px;
+    color: aqua;
+}

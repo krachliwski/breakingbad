@@ -1,41 +1,42 @@
 <!DOCTYPE html>
 <html lang="pt-br">
 
-<head>
-    <link rel="stylesheet" href="../css/style.css">
-</head>
-
 <body class='bg-actors'>
-    <div>
-        <h2>Atores</h2>
-    </div>
+    <div class='container-actors'>
+        <div class='title'>
+            <h2>Atores</h2>
+        </div>
 
-    <?php
-    $arquivo = URL . "characters";
+        <?php
+        include('Tradutor.php');
+        $arquivo = URL . "characters";
+        $dados = file_get_contents($arquivo);
+        $dados = json_decode($dados);
 
-    $dados = file_get_contents($arquivo);
+        foreach ($dados as $actors) {
+            $poster = $actors->img;
+            $translator = new Tradutor();
+            $status = $translator->traduzLang('en', 'pt-br', $actors->status);
+            $date = strtotime($actors->birthday);
+            $infos = "Nome: " . $actors->nickname . "</br> Status: " . $status . "</br> Aniversário: " . date('d/m/Y', $date) . "</br> Papel: ";
+        ?>
 
-    $dados = json_decode($dados);
+            <div class='actors'>
+                <div class='wraper'>
+                    <div class='cards'>
+                        <img src="<?= $poster ?>" alt="<?= $actors->name ?>">
 
-    foreach ($dados as $actors) {
-        $poster = $actors->img;
-
-    ?>
-
-        <div class='card'>
-            <div class='row'>
-                <div class="col-12 cold-md-9">
-                    <h1 class='actors-name'><?= $actors->name ?></h1>
-                </div>
-
-                <div class="col-12 col-md-3">
-                    <img src="<?= $poster ?>" alt="<?= $actors->name ?>" class='card-image'>
+                        <div class='descriptions'>
+                            <h1><?= $actors->name ?></h1>
+                            <p><?= $infos ?></p>
+                        </div>
+                    </div>
                 </div>
             </div>
-        </div>
-    <?php
-    }
-    ?>
+    </div>
+<?php
+        }
+?>
 </body>
 
 </html>

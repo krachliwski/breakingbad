@@ -11,7 +11,7 @@ include "configs.php";
   <title>Breaking Bad - API</title>
   <base href="http://localhost:8080/breakingbad/">
   <link rel="stylesheet" href="css/bootstrap.min.css">
-  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/styles.css">
 </head>
 
 <body>
