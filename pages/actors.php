@@ -7,21 +7,24 @@
             <h2>Atores</h2>
         </div>
 
-        <?php
-        include('Tradutor.php');
-        $arquivo = URL . "characters";
-        $dados = file_get_contents($arquivo);
-        $dados = json_decode($dados);
+        <div class='actors'>
+            <?php
+            include('Tradutor.php');
+            $arquivo = URL . "characters";
+            $dados = file_get_contents($arquivo);
+            $dados = json_decode($dados);
 
-        foreach ($dados as $actors) {
-            $poster = $actors->img;
-            $translator = new Tradutor();
-            $status = $translator->traduzLang('en', 'pt-br', $actors->status);
-            $date = strtotime($actors->birthday);
-            $infos = "Nome: " . $actors->nickname . "</br> Status: " . $status . "</br> Aniversário: " . date('d/m/Y', $date) . "</br> Papel: ";
-        ?>
+            foreach ($dados as $actors) {
+                $poster = $actors->img;
+                $translator = new Tradutor();
+                $status = $translator->traduzLang('en', 'pt-br', $actors->status);
+                $date = strtotime($actors->birthday);
+                $occupation = $actors->occupation;
+                $papers = implode("-", $occupation);
+                $papers = $translator->traduzLang('en', 'pt-br', $papers);
+                $infos = "Nome: " . $actors->nickname . "</br> Status: " . $status . "</br> Aniversário: " . date('d/m/Y', $date) . "</br> Papeis: " . $papers;
+            ?>
 
-            <div class='actors'>
                 <div class='wraper'>
                     <div class='cards'>
                         <img src="<?= $poster ?>" alt="<?= $actors->name ?>">
@@ -32,11 +35,13 @@
                         </div>
                     </div>
                 </div>
-            </div>
+
+            <?php
+            }
+            ?>
+        </div>
     </div>
-<?php
-        }
-?>
+
 </body>
 
 </html>

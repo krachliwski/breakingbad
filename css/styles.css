@@ -106,6 +106,20 @@ h2 {
     background-blend-mode: darken;
 }
 
+.container-episodes {
+    width: 1200px;
+    margin: auto;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(5, 240px);
+}
+
+.grid .coluna {
+    text-align: center;
+    margin: 20px;
+}
 
 
 /* ACTORS */
@@ -117,26 +131,24 @@ h2 {
     background-blend-mode: darken;
 }
 
-.container-actors{
+.container-actors {
     display: flex;
-    align-items: center;
-    justify-content: center;
     flex-direction: column;
 }
 
 .title {
-    padding-bottom: 100px;
+    padding-bottom: 200px;
 }
 
 .actors {
-    display: inline-block;
-    margin-left: 10px;
-    width: 220px;
-    height: 100px;
+    margin-left: 150px;
+    display: grid;
+    grid-template-columns: repeat(5, 20%);
 }
 
 .wraper {
     transform: translate(-50%, -50%);
+    margin: 10px;
 }
 
 .cards {
@@ -222,8 +234,8 @@ h2 {
 
 .phrase, .translate {
     width: 50%;
-    border: solid 1px #3a86ff;
-    border-radius: 5px;
+    border: solid 3px black;
+    border-radius: 10px;
 }
 
 .phrase {
@@ -242,10 +254,10 @@ h2 {
 
 h3 {
     font-size: 25px;
-    color: #3a86ff;
+    color: green;
 }
 
 .quotes p {
     font-size: 25px;
-    color: aqua;
+    color: rgb(255, 255, 255);
 }
